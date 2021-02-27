@@ -11,7 +11,6 @@ class LinkedList:
     new_node.next = self.head
     self.head = new_node
 
-
   def find(self,item):
 
     current = self.head
@@ -21,14 +20,15 @@ class LinkedList:
 
     while current != None and not found:
 
-      if current.data == item:
+      if current.data[0] == item[0]:
         found = True
       else:
         current = current.next
         counter += 1
 
     if found:
-      return counter
+      new_data = (current.data[0], (current.data[1] + 1))
+      current.data = new_data
     else:
       return -1
 
