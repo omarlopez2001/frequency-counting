@@ -56,7 +56,8 @@ class HashTable:
   # erase: 2
 
   def print_key_values(self):
-    pass
+    for ll in self.arr:
+      ll.print_nodes()
 
 
 
